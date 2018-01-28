@@ -1747,7 +1747,12 @@ function CPU( system ) {
 	function getCycles() {
 		return cyclesBurnt;
 	}
+	
+	function debug() {
+	  return { op, SP, PC };
+	}
 
+	this.debug = debug;
 	this.burn = burn;
 	this.reset = reset;
 	this.tick = tick;
